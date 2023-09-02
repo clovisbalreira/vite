@@ -30,7 +30,6 @@ function atualizarPrecoCarrinho(){
     const precoCarrinho = document.getElementById('preco-total')
     let precoTotalCarrinho = 0
     for(const idProdutoNoCarrinho in idsProdutoCarrinhoComQuantidade){
-        console.log(idProdutoNoCarrinho)
       precoTotalCarrinho += catalogo.find( p => p.id ===idProdutoNoCarrinho).preco * idsProdutoCarrinhoComQuantidade[idProdutoNoCarrinho]
     }
     precoCarrinho.innerHTML = `Total: R$${precoTotalCarrinho}`
